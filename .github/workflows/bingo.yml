@@ -10,4 +10,4 @@ jobs:
     steps:
       - run: |
           echo 'cool cool'
-      - run: echo ${{ github.event.client_payload.sha }}
+      - run: echo ${{ github.event.client_payload.branch }}

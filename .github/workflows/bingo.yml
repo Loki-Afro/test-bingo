@@ -11,6 +11,7 @@ jobs:
       - run: |
           echo 'cool cool'
       - run: echo ${{ github.event.client_payload.branch }}
+      - uses: actions/checkout@v3
       - run: |
           if grep -q "${{ github.event.client_payload.branch }}," bingo.csv; then
             echo "branch does exist";

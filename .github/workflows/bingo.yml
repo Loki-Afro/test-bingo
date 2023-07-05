@@ -2,11 +2,12 @@ name: Deploy on Events
 
 on:
   repository_dispatch:
-    types: [dev-deploy]
+    types: [my-event]
 
 jobs:
-  branch_name:
+  do_smth:
     runs-on: ubuntu-latest
     steps:
       - run: |
           echo 'cool cool'
+      - run: echo ${{ github.event.client_payload.sha }}

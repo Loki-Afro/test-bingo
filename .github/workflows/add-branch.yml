@@ -2,7 +2,7 @@ name: Deploy on Events
 
 on:
   repository_dispatch:
-    types: [my-event]
+    types: [add-branch]
 
 jobs:
   do_smth:

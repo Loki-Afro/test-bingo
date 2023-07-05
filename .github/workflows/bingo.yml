@@ -1,0 +1,12 @@
+name: Deploy on Events
+
+on:
+  repository_dispatch:
+    types: [dev-deploy]
+
+jobs:
+  branch_name:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo 'cool cool'

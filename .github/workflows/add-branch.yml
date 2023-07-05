@@ -1,4 +1,4 @@
-name: Deploy on Events
+name: Add Branch
 
 on:
   repository_dispatch:

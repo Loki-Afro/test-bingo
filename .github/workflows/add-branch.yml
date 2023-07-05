@@ -17,6 +17,7 @@ jobs:
       - run: |
           if grep -q "${{ github.event.client_payload.branch }}," bingo.csv; then
             echo "branch does exist";
+            return;
           else 
             echo "${{ github.event.client_payload.branch }},y,y,y" >> bingo.csv
           fi

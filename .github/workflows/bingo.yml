@@ -12,6 +12,8 @@ jobs:
           echo 'cool cool'
       - run: echo ${{ github.event.client_payload.branch }}
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.BINGO_TOKEN }}
       - run: |
           if grep -q "${{ github.event.client_payload.branch }}," bingo.csv; then
             echo "branch does exist";
